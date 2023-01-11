@@ -52,10 +52,10 @@ class App extends Component {
     const { filter } = this.state;
     return (
       <div className={css.container}>
-        <h1>Phonebook</h1>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm onSubmit={this.addName} />
 
-        <h2>Contacts</h2>
+        <h2 className={css.subtitle}>Contacts</h2>
         <Filter onChange={this.handleFilter} value={filter} />
         <ContactList
           contacts={this.getVisibleContacts()}
