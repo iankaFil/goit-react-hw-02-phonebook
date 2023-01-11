@@ -16,8 +16,12 @@ class App extends Component {
     filter: '',
   };
   addName = ({ name, number }) => {
-    const names = this.state.contacts.map(contact => contact.name);
-    if (names.indexOf(name) >= 0) {
+    const names = this.state.contacts.map(contact =>
+      contact.name.toLowerCase()
+    );
+    const lowerCaseName = name.toLowerCase();
+
+    if (names.indexOf(lowerCaseName) >= 0) {
       alert(name + ' is already in contacts');
       return;
     }
