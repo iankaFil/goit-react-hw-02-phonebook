@@ -18,7 +18,8 @@ const ContactList = ({ contacts, onRemove }) => {
   );
 };
 ContactList.propTypes = {
-  contacts: PropTypes.array,
-  onRemove: PropTypes.func,
+  id: PropTypes.string.isRequired,
+  contacts: PropTypes.array.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 export default ContactList;
