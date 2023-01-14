@@ -48,9 +48,10 @@ class App extends Component {
   getVisibleContacts = () => {
     let { filter, contacts } = this.state;
     const normalizedFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
+    const newArray = contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
+    return newArray;
   };
   render() {
     const { filter } = this.state;
